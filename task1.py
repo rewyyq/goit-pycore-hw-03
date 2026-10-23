@@ -9,6 +9,6 @@ while True:
 
 def get_days_from_today(date: datetime):
     current_day = datetime.today()
-    res = current_day.toordinal() - date.toordinal()    #.toordinal to get amount of days
+    res = current_day.toordinal() - date.toordinal()    #.toordinal to get amount of days between dates
     return print(f"{res} days from now to {date}")
 get_days_from_today(date)
