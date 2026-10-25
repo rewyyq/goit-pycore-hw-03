@@ -7,11 +7,11 @@ def get_numbers_ticket(min: int, max: int, quantity: int) ->list[int]:
             return []
         elif max > max_value:
             return []
-        elif quantity < min or quantity > max:
+        elif quantity < 1 or quantity > (max - min + 1):
             return []
         else: 
             res = random.sample(range(min, max+1), quantity)  #create list with unique numbers in range from min max and quantity
             res.sort()
             return res
-    except TypeError:
+    except ValueError, TypeError:
         print("Wrong type!")
